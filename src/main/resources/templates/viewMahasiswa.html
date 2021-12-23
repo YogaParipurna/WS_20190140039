@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Data Mahasiswa</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div align=center >Data Mahasiswa</div>
+        <hr>
+        <table align="left++2" border="5" cellpadding="2" cellspacing="5">
+            <th>No.</th>
+            <th>NIM</th>
+            <th>Nama Mahasiswa </th>
+            <th>Alamat</th>
+            <th>Program Studi </th>
+            <th>Fakultas</th>
+                <tbody th:each="mahasiswa,count:${mhs}">
+                    <tr>
+                    <td th:text="${count.index+1}"></td>
+                    <td th:text="${mahasiswa[0]}"></td>
+                    <td th:text="${mahasiswa[1]}" class="text-center"></td>
+                    <td th:text="${mahasiswa[2]}"></td>
+                    <td th:text="${mahasiswa[3]}"></td>
+                    <td th:text="${mahasiswa[4]}"></td>
+                </tr>
+        </tbody>
+        </table>
+    </body>
+</html>
